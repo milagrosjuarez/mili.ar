@@ -3,133 +3,116 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mili — UX/UI Designer</title>
+<title>mili.ar — UX/UI Design</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<nav class="nav">
-  <div class="nav-logo">mili<span class="dot">.</span>design</div>
-  <ul class="nav-links">
-    <li><a href="#sobre-mi">Sobre mí</a></li>
-    <li><a href="#que-hago">Qué hago</a></li>
-    <li><a href="#craft">Craft</a></li>
-    <li><a href="#contacto">Contacto</a></li>
-    <li><button class="theme-toggle" id="themeToggle" type="button"><span class="icon" id="themeIcon">☾</span><span id="themeLabel">Dark</span></button></li>
-  </ul>
-</nav>
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">mili.ar</a>
+    <nav class="nav-links">
+      <a href="portfolio/index.html">portfolio</a>
+      <a href="rincon-crafty/index.html">rincón crafty</a>
+      <a href="contacto/index.html">contacto</a>
+    </nav>
+  </div>
+</header>
 
-<!-- 1. HERO -->
-<section class="hero">
-  <div class="hero-bg-text" aria-hidden="true">M</div>
-  <div class="hero-content">
-    <div class="hero-eyebrow">Mili · UX/UI Designer</div>
-    <h1 class="hero-h1 reveal">
-      Diseño experiencias,<br>
-      y sé cómo <span class="green">hablarles</span>.
-    </h1>
-    <p class="hero-sub reveal">UX/UI Designer con background en UX Writing. Diseño con las palabras y con las pantallas.</p>
-    <div class="hero-tags reveal">
-      <span class="tag fill-lima">UX / UI Design</span>
-      <span class="tag fill-negro">Mercado Libre</span>
-      <span class="tag">Argentina</span>
+<main>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="hero-icon">✂️</span>
+      <h1 class="hero-title">
+        UX con un toque<br>
+        de <span class="highlight">crafting</span>
+      </h1>
+      <p class="hero-subtitle">UX/UI Designer con background en UX Writing.</p>
+      <div class="tags">
+        <span class="tag tag-lima">UX / UI DESIGN</span>
+        <span class="tag tag-dark">MERCADO LIBRE</span>
+        <span class="tag tag-outline">ARGENTINA</span>
+      </div>
     </div>
-  </div>
-  <div class="hero-rule reveal">
-    <span>Portfolio en construcción</span>
-    <span>mili.ar · 2026</span>
-  </div>
-</section>
+  </section>
 
-<!-- 2. SOBRE MI -->
-<div class="band">
-  <div class="band-inner reveal">
-    <p class="band-statement">
-      Empecé escribiendo para la experiencia.<br>
-      Ahora la <span class="hl">diseño de punta a punta</span>.
-    </p>
-    <div class="band-aside">
-      // Letras → Tecnología<br>
-      // UX Writing (2019–hoy)<br>
-      // UX/UI Design (en formación)
+  <section class="section" id="sobre-mi">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-number">01</span>
+        <h2 class="section-title">Sobre mí</h2>
+      </div>
+      <div class="about-text">
+        <p>UX/UI Designer con background en UX Writing en Mercado Libre.</p>
+        <p>Diseño experiencias digitales con enfoque en producto, integrando estrategia, investigación y arquitectura de información para resolver problemas complejos de manera clara y escalable.</p>
+        <p>Mi recorrido combina formación en Letras, Sistemas y Diseño, lo que me permite abordar los productos desde una mirada interdisciplinaria. Lidero el proceso de punta a punta: desde la construcción del brief y la definición de objetivos hasta el diseño integral del flujo y su implementación en producción, alineando necesidades de usuario, negocio y restricciones técnicas.</p>
+        <p>Incorporo herramientas de IA como Claude, ChatGPT, Gemini y Figma en mis procesos de research, síntesis, ideación y exploración de soluciones, usándolas para acelerar iteraciones y enriquecer la toma de decisiones.</p>
+      </div>
     </div>
-  </div>
-</div>
+  </section>
 
-<section class="sec" id="sobre-mi">
-  <div class="sec-head reveal">
-    <span class="sec-num">01</span>
-    <h2 class="sec-title">Sobre mí</h2>
-  </div>
-  <div class="sec-body reveal">
-    <p>Empecé estudiando Letras — siempre me gustó escribir, y durante un tiempo mi plan fue ser escritora. Pero necesitaba abrir mi camino profesional, así que me volqué a la tecnología y ahora soy Licenciada en Tecnología de la Información.</p>
-    <p>Ahí descubrí que la tecnología también tenía lugar para la escritura: el mundo del contenido y la experiencia de usuario. Arranqué como UX Writer freelance en 2018, con la guía de Emi Cossenza, y en 2019 di el salto a mi primer trabajo formal en Alquilando, una startup donde aprendí trabajo en equipo, metodologías ágiles y a llevar un proyecto de punta a punta. Después pasé por Banco Galicia, y desde 2021 trabajo en Mercado Libre, donde construí la mayor parte de mi carrera.</p>
-    <p>Hoy estoy dando un nuevo salto: de escribir la experiencia a diseñarla de punta a punta Estoy formándome en UX/UI de forma autodidacta —cursos, Figma, componentización— con mucho apoyo de mis colegas en el camino.</p>
-    <p>Me gusta entender el porqué antes de proponer. Soy metódica casi por convicción: documento mis procesos para no perder trabajo hecho, y disfruto tanto de la parte creativa como de la estratégica.</p>
-    <div class="meta-row">
-      <span class="tag">Español</span>
-      <span class="tag">Inglés</span>
-      <span class="tag">Portugués (en progreso)</span>
+  <section class="section" id="haciendo">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-number">02</span>
+        <h2 class="section-title">Qué estoy haciendo</h2>
+      </div>
+      <div class="cards-grid">
+        <article class="project-card">
+          <div class="card-body">
+            <span class="tag tag-dark small">UX RESEARCH · 2025</span>
+            <h3 class="card-title">Rediseño de flujo de onboarding</h3>
+            <p class="card-text">Investigación de usuarios, wireframes y prototipo de alta fidelidad para una app de bienestar. 12 entrevistas, 3 semanas de iteración.</p>
+          </div>
+          <div class="card-footer">FIGMA · MAZE · NOTION</div>
+        </article>
+        <article class="project-card">
+          <div class="card-body">
+            <span class="tag tag-dark small">UX RESEARCH · 2025</span>
+            <h3 class="card-title">Rediseño de flujo de onboarding</h3>
+            <p class="card-text">Investigación de usuarios, wireframes y prototipo de alta fidelidad para una app de bienestar. 12 entrevistas, 3 semanas de iteración.</p>
+          </div>
+          <div class="card-footer">FIGMA · MAZE · NOTION</div>
+        </article>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- 3. QUE HAGO -->
-<section class="sec" id="que-hago" style="background:var(--surface);">
-  <div class="sec-head reveal">
-    <span class="sec-num">02</span>
-    <h2 class="sec-title">Qué estoy haciendo</h2>
-  </div>
-  <div class="reveal">
-    <div class="work-card">
-      <div class="work-card-body">
-        <div class="wc-tag">Mercado Libre · Vendedor Full</div>
-        <div class="wc-title">Herramientas de reposición para vendedores</div>
-        <div class="wc-desc">Diseño experiencias que ayudan al vendedor a identificar qué reponer, en qué cantidad y en qué momento — potenciando las ventas de su negocio.</div>
-        <div class="wc-chips">
-          <span class="wc-chip">E-commerce</span>
-          <span class="wc-chip">Figma</span>
-          <span class="wc-chip">En progreso</span>
+  <section class="section" id="rincon-craft">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-number">03</span>
+        <h2 class="section-title">Rincón craft</h2>
+      </div>
+      <div class="craft-banner">
+        <span class="craft-icon">✂️</span>
+        <div class="craft-content">
+          <p class="craft-text">Cuando no estoy diseñando pantallas, estoy con las manos en alguna manualidad.</p>
+          <a href="#" class="craft-link">@MILIDESIGN.AR ↗</a>
         </div>
       </div>
     </div>
-    <p class="explore-note">En mis tiempos libres, exploro problemas cotidianos que encuentro a mi alrededor: siempre hay algo para simplificar, algo para diseñar mejor.</p>
-  </div>
-</section>
+  </section>
 
-<!-- 4. GUIÑO PERSONAL -->
-<section class="sec" id="craft">
-  <div class="sec-head reveal">
-    <span class="sec-num">03</span>
-    <h2 class="sec-title">Fuera de las pantallas</h2>
-  </div>
-  <div class="craft-block reveal">
-    <div class="craft-icon">✂</div>
-    <div>
-      <p class="craft-text">Cuando no estoy diseñando pantallas, estoy con las manos en algo: scrapbook, plantillas, color.</p>
-      <a href="#" class="craft-link">@milidesign.ar ↗</a>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <a href="#" class="footer-logo">mili<span class="dot">.</span>ar</a>
+    <hr class="footer-line">
+    <div class="footer-links">
+      <a href="#" class="tag tag-outline dark">LINKEDIN ↗</a>
+      <a href="#" class="tag tag-outline dark">LINKEDIN ↗</a>
+      <a href="#" class="tag tag-outline dark">LINKEDIN ↗</a>
     </div>
-  </div>
-</section>
-
-<!-- 5. CONTACTO -->
-<footer id="contacto">
-  <div class="footer-top">
-    <div class="footer-logo">mili<span class="dot">.</span>design</div>
-    <div class="footer-cta">¿Hablamos? Siempre abierta a nuevas conversaciones.</div>
-  </div>
-  <div class="footer-links">
-    <a href="#" class="footer-link">LinkedIn ↗</a>
-    <a href="#" class="footer-link">Instagram ↗</a>
-    <a href="#" class="footer-link">Descargar CV ↓</a>
-  </div>
-  <div class="footer-bottom">
-    <span>mili.ar · v1 · 2026</span>
-    <span>Diseñado por Mili</span>
+    <div class="footer-bottom">
+      <span>MILI.AR · V2 · 2026</span>
+      <span>DISEÑADO POR MILAGROS JUAREZ</span>
+    </div>
   </div>
 </footer>
 

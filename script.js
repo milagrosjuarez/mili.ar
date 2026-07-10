@@ -1,29 +1,16 @@
-// Toggle de tema (claro/oscuro). Arranca respetando la preferencia del sistema.
-  const root = document.documentElement;
-  const btn = document.getElementById('themeToggle');
-  const icon = document.getElementById('themeIcon');
-  const label = document.getElementById('themeLabel');
-  const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  let isDark = systemDark;
+// mili.ar — Home V2
+// Espacio reservado para futuras interacciones (scroll suave, menú mobile, etc.)
 
-  function applyTheme() {
-    if (isDark) {
-      root.setAttribute('data-theme', 'dark');
-      icon.textContent = '☀';
-      label.textContent = 'Light';
-    } else {
-      root.setAttribute('data-theme', 'light');
-      icon.textContent = '☾';
-      label.textContent = 'Dark';
-    }
-  }
-  applyTheme();
-  btn.addEventListener('click', () => { isDark = !isDark; applyTheme(); });
-
-  const els = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+document.addEventListener('DOMContentLoaded', () => {
+  // Scroll suave para los links del nav
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const targetId = link.getAttribute('href');
+      const target = document.querySelector(targetId);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     });
-  }, { threshold: 0.12 });
-  els.forEach(el => io.observe(el));
+  });
+});

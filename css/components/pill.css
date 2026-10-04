@@ -1,0 +1,30 @@
+/* Pills / tags */
+
+.pill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pill {
+  display: inline-block;
+  padding: 9px 17px;
+  border: var(--stroke) solid var(--color-crema);
+  border-radius: var(--radius-pill);
+  background: var(--color-crema);
+  color: var(--color-negro);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  line-height: 17.36px;
+  letter-spacing: 0.56px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.pill--lima {
+  background: var(--color-lima);
+  border-color: var(--color-lima);
+}

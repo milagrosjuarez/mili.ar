@@ -1,0 +1,75 @@
+/* ==========================================================================
+   Design tokens — fuente de verdad del sistema visual.
+   Vienen de las variables del Figma (mili.ar). Si cambia algo en Figma,
+   se cambia acá y se propaga a todo el sitio.
+   ========================================================================== */
+
+:root {
+  /* Color */
+  --color-negro: #1c1a12;
+  --color-crema: #f5f0e8;
+  --color-lima: #c8e64a;
+  --color-rosa: #f2c4ce;
+  --color-gris-claro: #d9d9d9;
+
+  /* Tipografía */
+  --font-display: "Fredoka", system-ui, sans-serif;
+  --font-body: "Space Grotesk", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --text-display: 3.75rem;   /* 60 */
+  --text-h1: 2.25rem;        /* 36 */
+  --text-h2: 1.5rem;         /* 24 */
+  --text-body: 1rem;         /* 16 */
+  --text-small: 0.875rem;    /* 14 */
+  --text-label: 0.6875rem;   /* 11 */
+
+  --lh-display: 4rem;
+  --lh-h1: 2.625rem;
+  --lh-h2: 2rem;
+  --lh-body: 1.625rem;
+
+  /* Espaciado (escala de 8) */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 2.5rem;
+  --space-6: 3rem;
+  --space-8: 4rem;
+
+  /* Layout */
+  --page-gutter: 4rem;       /* 64 */
+  --content-max: 82rem;      /* 1312 */
+
+  /* Forma */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 100px;
+  --stroke: 1px;
+
+  /* Movimiento */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 180ms;
+  --dur-base: 500ms;
+  --dur-slow: 900ms;
+}
+
+@media (max-width: 900px) {
+  :root {
+    --page-gutter: 1.5rem;
+    --text-display: 2.75rem;
+    --lh-display: 3rem;
+    --text-h1: 1.875rem;
+    --lh-h1: 2.25rem;
+  }
+}
+
+/* Celular: "UX con un toque / de crafting" entra en dos líneas */
+@media (max-width: 480px) {
+  :root {
+    --text-display: 2.4rem;
+    --lh-display: 2.75rem;
+  }
+}

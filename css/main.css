@@ -1,0 +1,16 @@
+/* Punto de entrada de estilos. El orden importa: tokens → base → componentes → páginas. */
+
+@import "tokens.css";
+@import "base.css";
+
+@import "components/nav.css";
+@import "components/footer.css";
+@import "components/button.css";
+@import "components/pill.css";
+@import "components/badge.css";
+@import "components/animations.css";
+@import "components/wip.css";
+
+@import "pages/home.css";
+@import "pages/portfolio.css";
+@import "pages/contact.css";

@@ -1,0 +1,191 @@
+/* ==========================================================================
+   Credencial colgante del hero.
+   .badge        → péndulo (rota sobre su punto de colgado, lo mueve js/components/badge.js)
+   .badge__strap → cinta
+   .badge__card  → tarjeta (se inclina en 3D y tiene brillo al pasar el mouse)
+   ========================================================================== */
+
+.badge {
+  --strap-w: 30px;
+  --hang: 120px; /* distancia desde el borde superior del hero hasta la tarjeta */
+
+  position: relative;
+  flex: none;
+  width: 22.1875rem; /* 355 */
+  padding-top: var(--hang);
+  transform-origin: 50% 0;
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+  will-change: transform;
+}
+
+.badge.is-dragging {
+  cursor: grabbing;
+}
+
+/* Punto de colgado: no se mueve cuando el péndulo rota (lo usa el JS para medir) */
+.badge__pivot {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Cinta: sube por detrás del nav y baja hasta el broche */
+.badge__strap {
+  position: absolute;
+  left: 50%;
+  top: -400px;
+  width: var(--strap-w);
+  height: calc(400px + var(--hang) - 58px);
+  transform: translateX(-50%);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-lima);
+  /* bordes cosidos + leve sombreado de tela */
+  box-shadow: inset 3px 0 0 -1px rgba(28, 26, 18, 0.28), inset -3px 0 0 -1px rgba(28, 26, 18, 0.28),
+    inset 0 -14px 12px -10px rgba(28, 26, 18, 0.35);
+}
+
+/* Broche metálico que une la cinta con la ranura */
+.badge__clasp {
+  position: absolute;
+  left: 50%;
+  top: calc(var(--hang) - 62px);
+  width: 34px;
+  height: 100px;
+  transform: translateX(-50%);
+  z-index: 2; /* el aro se ve pasando por la ranura, delante de la tarjeta */
+  pointer-events: none;
+}
+
+.badge__card {
+  position: relative;
+  padding: 20px 40px 40px;
+  border: var(--stroke) solid var(--color-crema);
+  border-radius: var(--radius-sm);
+  background: var(--color-negro);
+  transform: perspective(900px) rotateX(var(--ry, 0deg)) rotateY(var(--rx, 0deg));
+  transition: transform 350ms var(--ease-out);
+  overflow: hidden;
+}
+
+.badge__card.is-tilting {
+  transition: transform 80ms linear;
+}
+
+.badge__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Ranura de la credencial: un agujero real, por donde pasa el broche */
+.badge__slot {
+  width: 80px;
+  height: 20px;
+  border-radius: var(--radius-md);
+  background: #0c0b07;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.8), 0 1px 0 rgba(245, 240, 232, 0.35);
+}
+
+.badge__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.badge__photo {
+  width: 275px;
+  height: 312px;
+  border: var(--stroke) solid var(--color-crema);
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+.badge__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.badge__name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--text-h2);
+  line-height: var(--lh-h2);
+}
+
+.badge__location {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  letter-spacing: 0.0077px;
+  text-transform: uppercase;
+  line-height: normal;
+}
+
+/* Brillo que sigue al mouse + reflejo tornasolado tipo laminado */
+.badge__glare {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 300ms var(--ease-out);
+  background:
+    radial-gradient(circle at var(--mx, 50%) var(--my, 0%), rgba(255, 255, 255, 0.22), transparent 55%),
+    linear-gradient(
+      115deg,
+      transparent 25%,
+      rgba(200, 230, 74, 0.2) 42%,
+      rgba(242, 196, 206, 0.22) 50%,
+      rgba(245, 240, 232, 0.16) 58%,
+      transparent 75%
+    );
+  background-size: 100% 100%, 260% 260%;
+  background-position: 0 0, var(--mx, 50%) var(--my, 50%);
+}
+
+.badge__card.is-tilting .badge__glare,
+.badge:hover .badge__glare {
+  opacity: 1;
+}
+
+/* Celular: credencial compacta para que el título del hero asome en la primera pantalla */
+@media (max-width: 700px) {
+  .badge {
+    --hang: 76px;
+
+    width: min(100%, 17rem);
+  }
+
+  .badge__card {
+    padding: 16px 20px 20px;
+  }
+
+  .badge__inner {
+    gap: 12px;
+  }
+
+  .badge__body {
+    gap: var(--space-2);
+  }
+
+  .badge__photo {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 224 / 190;
+  }
+
+  .badge__text {
+    gap: var(--space-1);
+  }
+}

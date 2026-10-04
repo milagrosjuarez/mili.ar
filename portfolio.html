@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio — mili.ar</title>
+    <meta name="description" content="Casos de estudio de UX/UI de Milagros. Próximamente." />
+    <meta name="theme-color" content="#1c1a12" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=JetBrains+Mono:wght@400&family=Space+Grotesk:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <script>document.documentElement.classList.add("js");</script>
+    <script type="module" src="js/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="nav">
+      <div class="container nav__inner">
+        <a class="nav__logo" href="index.html" aria-label="mili.ar, inicio">mili.ar</a>
+        <nav aria-label="Principal">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="portfolio.html" aria-current="page">portfolio</a></li>
+            <!-- V2: <li><a class="nav__link" href="sobre-mi.html">sobre mí</a></li> -->
+            <li><a class="nav__link" href="contacto.html">contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <div class="container section--page">
+        <header class="page-header">
+          <p class="t-label page-header__eyebrow">Portfolio</p>
+          <h1 class="t-display">Casos de estudio</h1>
+          <p>Una selección de proyectos donde investigué, prototipé y diseñé interfaces.</p>
+        </header>
+      </div>
+
+      <!-- Decorativo. V2: reemplazar toda esta sección por la grilla de cards reales (components/card.css) -->
+      <div class="wip" aria-hidden="true">
+        <div class="tape">
+          <div class="tape__track">
+            <span>EN CONSTRUCCIÓN ✦ WORK IN PROGRESS ✦ EN CONSTRUCCIÓN ✦ WORK IN PROGRESS ✦ EN CONSTRUCCIÓN ✦ WORK IN PROGRESS ✦ EN CONSTRUCCIÓN ✦ WORK IN PROGRESS ✦ EN CONSTRUCCIÓN ✦ WORK IN PROGRESS ✦ EN CONSTRUCCIÓN ✦ WORK IN PROGRESS ✦ EN CONSTRUCCIÓN ✦ WORK IN PROGRESS ✦ EN CONSTRUCCIÓN ✦ WORK IN PROGRESS ✦ </span>
+            <span>EN CONSTRUCCIÓN ✦ WORK IN PROGRESS ✦ EN CONSTRUCCIÓN ✦ WORK IN PROGRESS ✦ EN CONSTRUCCIÓN ✦ WORK IN PROGRESS ✦ EN CONSTRUCCIÓN ✦ WORK IN PROGRESS ✦ EN CONSTRUCCIÓN ✦ WORK IN PROGRESS ✦ EN CONSTRUCCIÓN ✦ WORK IN PROGRESS ✦ EN CONSTRUCCIÓN ✦ WORK IN PROGRESS ✦ EN CONSTRUCCIÓN ✦ WORK IN PROGRESS ✦ </span>
+          </div>
+        </div>
+        <div class="tape tape--alt">
+          <div class="tape__track">
+            <span>MUY PRONTO ✦ CASOS DE ESTUDIO ✦ INVESTIGAR ✦ PROTOTIPAR ✦ DISEÑAR ✦ MUY PRONTO ✦ CASOS DE ESTUDIO ✦ INVESTIGAR ✦ PROTOTIPAR ✦ DISEÑAR ✦ MUY PRONTO ✦ CASOS DE ESTUDIO ✦ INVESTIGAR ✦ PROTOTIPAR ✦ DISEÑAR ✦ </span>
+            <span>MUY PRONTO ✦ CASOS DE ESTUDIO ✦ INVESTIGAR ✦ PROTOTIPAR ✦ DISEÑAR ✦ MUY PRONTO ✦ CASOS DE ESTUDIO ✦ INVESTIGAR ✦ PROTOTIPAR ✦ DISEÑAR ✦ MUY PRONTO ✦ CASOS DE ESTUDIO ✦ INVESTIGAR ✦ PROTOTIPAR ✦ DISEÑAR ✦ </span>
+          </div>
+        </div>
+
+        <div class="container">
+          <ul class="wip__grid">
+            <li class="wip-card" style="--i: 0">
+              <svg class="wip-card__frame"><rect pathLength="1" /></svg>
+              <div class="wip-card__img"></div>
+              <span class="wip-card__stamp t-label">Caso 01 · investigando</span>
+              <div class="wip-card__lines"><span></span><span></span><span></span></div>
+            </li>
+            <li class="wip-card" style="--i: 1">
+              <svg class="wip-card__frame"><rect pathLength="1" /></svg>
+              <div class="wip-card__img"></div>
+              <span class="wip-card__stamp t-label">Caso 02 · prototipando</span>
+              <div class="wip-card__lines"><span></span><span></span><span></span></div>
+            </li>
+            <li class="wip-card" style="--i: 2">
+              <svg class="wip-card__frame"><rect pathLength="1" /></svg>
+              <div class="wip-card__img"></div>
+              <span class="wip-card__stamp t-label">Caso 03 · diseñando</span>
+              <div class="wip-card__lines"><span></span><span></span><span></span></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__main">
+        <div class="footer__brand">
+          <p class="footer__brand-name">Mili Design</p>
+          <p class="footer__brand-tagline">UX/UI Design, con un toque de crafting.</p>
+        </div>
+        <ul class="footer__col">
+          <li><a href="index.html#sobre-mi">Sobre mí</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+        </ul>
+        <ul class="footer__col">
+          <li><a class="footer__cta" href="contacto.html">Escribime →</a></li>
+          <li><a class="footer__handle" href="https://www.instagram.com/milidesign.ar/" target="_blank" rel="noopener noreferrer">@milidesign.ar</a></li>
+        </ul>
+      </div>
+      <p class="footer__bottom">© 2026 Mili Design</p>
+    </footer>
+  </body>
+</html>

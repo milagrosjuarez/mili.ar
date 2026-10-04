@@ -1,136 +1,159 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>mili.ar — UX/UI Design</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>mili.ar — UX/UI Designer</title>
+    <meta name="description" content="Milagros, UX/UI Designer con background en UX Writing. UX con un toque de crafting." />
+    <meta name="theme-color" content="#1c1a12" />
+    <meta property="og:title" content="mili.ar — UX/UI Designer" />
+    <meta property="og:description" content="UX con un toque de crafting." />
+    <meta property="og:type" content="website" />
 
-<header class="nav">
-  <div class="nav-inner">
-    <a href="#" class="logo">mili.ar</a>
-    <nav class="nav-links">
-      <a href="portfolio/index.html">portfolio</a>
-      <a href="rincon-crafty/index.html">rincón crafty</a>
-      <a href="contacto/index.html">contacto</a>
-    </nav>
-  </div>
-</header>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=JetBrains+Mono:wght@400&family=Space+Grotesk:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <script>document.documentElement.classList.add("js");</script>
+    <script type="module" src="js/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-<main>
-
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="hero-text">
-        <span class="hero-icon">✂️</span>
-        <h1 class="hero-title">
-          UX con un toque<br>
-          de <span class="highlight">crafting</span>
-        </h1>
-        <p class="hero-subtitle">UX/UI Designer con background en UX Writing.</p>
-        <div class="tags">
-          <span class="tag tag-lima">UX / UI DESIGN</span>
-          <span class="tag tag-dark">MERCADO LIBRE</span>
-          <span class="tag tag-outline">ARGENTINA</span>
-        </div>
+    <header class="nav">
+      <div class="container nav__inner">
+        <a class="nav__logo" href="index.html" aria-label="mili.ar, inicio">mili.ar</a>
+        <nav aria-label="Principal">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="portfolio.html">portfolio</a></li>
+            <!-- V2: <li><a class="nav__link" href="sobre-mi.html">sobre mí</a></li> -->
+            <li><a class="nav__link" href="contacto.html">contacto</a></li>
+          </ul>
+        </nav>
       </div>
+    </header>
 
-      <div class="hero-lanyard" id="heroLanyard">
-        <div class="hero-lanyard-anchor"></div>
-        <div class="hero-lanyard-pivot" id="heroLanyardPivot">
-          <div class="hero-lanyard-string"></div>
-          <div class="hero-lanyard-card">
-            <div class="hero-lanyard-hole"></div>
-            <div class="hero-lanyard-logo">M</div>
-            <div class="hero-lanyard-name">Mili</div>
-            <div class="hero-lanyard-role">UX / UI Designer</div>
+    <main id="contenido">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero__inner">
+          <div class="hero__content">
+            <div class="hero__text">
+              <h1 class="hero__title" id="hero-title">
+                UX con un toque de <span class="highlight">crafting</span>
+              </h1>
+              <p>UX/UI Designer con background en UX Writing.</p>
+            </div>
+            <ul class="pill-list" aria-label="Áreas">
+              <li><span class="pill pill--lima">UX / UI Design</span></li>
+              <li><span class="pill">Mercado Libre</span></li>
+            </ul>
+          </div>
+
+          <!-- Credencial colgante: se puede agarrar y soltar (js/components/badge.js) -->
+          <div class="badge" data-badge>
+            <span class="badge__pivot" aria-hidden="true"></span>
+            <div class="badge__strap" aria-hidden="true"></div>
+            <svg class="badge__clasp" viewBox="0 0 34 100" fill="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#f4f2ec" />
+                  <stop offset="0.5" stop-color="#a9a79e" />
+                  <stop offset="1" stop-color="#e3e0d6" />
+                </linearGradient>
+              </defs>
+              <rect x="2" y="0" width="30" height="14" rx="3" fill="url(#metal)" />
+              <rect x="14" y="14" width="6" height="20" rx="3" fill="url(#metal)" />
+              <ellipse cx="17" cy="64" rx="13" ry="29" stroke="url(#metal)" stroke-width="4" />
+            </svg>
+
+            <figure class="badge__card" style="margin: 0">
+              <div class="badge__inner">
+                <div class="badge__slot" aria-hidden="true"></div>
+                <div class="badge__body">
+                  <img
+                    class="badge__photo"
+                    src="assets/img/mili-credencial.jpg"
+                    alt="Retrato de Milagros"
+                    width="768"
+                    height="1024"
+                    draggable="false"
+                  />
+                  <figcaption class="badge__text">
+                    <span class="badge__name">Milagros</span>
+                    <span class="badge__location">Buenos Aires, Argentina</span>
+                  </figcaption>
+                </div>
+              </div>
+              <span class="badge__glare" aria-hidden="true"></span>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <div class="section" id="sobre-mi" aria-labelledby="about-label">
+        <div class="container about">
+          <div class="about__visual" data-reveal>
+            <img class="about__blob" src="assets/img/blob-sobre-mi.svg" alt="" width="359" height="300" />
+            <div class="about__photo">
+              <img src="assets/img/mili-sobre-mi.png" alt="Milagros sonriendo" width="1125" height="1500" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="about__text" data-reveal data-reveal-delay="1">
+            <h2 class="t-label about__label" id="about-label">Sobre mí</h2>
+            <div class="about__body">
+              <div class="about__copy">
+                <p>UX/UI Designer con background en UX Writing en Mercado Libre.</p>
+                <p>
+                  Diseño experiencias digitales con enfoque en producto, integrando estrategia, investigación y
+                  arquitectura de información para resolver problemas complejos de manera clara y escalable.
+                </p>
+                <p>
+                  Mi recorrido combina formación en Letras, Sistemas y Diseño, lo que me permite abordar los productos
+                  desde una mirada interdisciplinaria. Lidero el proceso de punta a punta: desde la construcción del
+                  brief y la definición de objetivos hasta el diseño integral del flujo y su implementación en
+                  producción, alineando necesidades de usuario, negocio y restricciones técnicas.
+                </p>
+                <p>
+                  Incorporo herramientas de IA como Claude, ChatGPT, Gemini y Figma en mis procesos de research,
+                  síntesis, ideación y exploración de soluciones, usándolas para acelerar iteraciones y enriquecer la
+                  toma de decisiones.
+                </p>
+              </div>
+              <!-- V2: sumar acá el botón "Conocer más" apuntando a sobre-mi.html -->
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section class="section" id="sobre-mi">
-    <div class="section-inner">
-      <div class="section-header">
-        <span class="section-number">01</span>
-        <h2 class="section-title">Sobre mí</h2>
-      </div>
-      <div class="about-text">
-        <p>UX/UI Designer con background en UX Writing en Mercado Libre.</p>
-        <p>Diseño experiencias digitales con enfoque en producto, integrando estrategia, investigación y arquitectura de información para resolver problemas complejos de manera clara y escalable.</p>
-        <p>Mi recorrido combina formación en Letras, Sistemas y Diseño, lo que me permite abordar los productos desde una mirada interdisciplinaria. Lidero el proceso de punta a punta: desde la construcción del brief y la definición de objetivos hasta el diseño integral del flujo y su implementación en producción, alineando necesidades de usuario, negocio y restricciones técnicas.</p>
-        <p>Incorporo herramientas de IA como Claude, ChatGPT, Gemini y Figma en mis procesos de research, síntesis, ideación y exploración de soluciones, usándolas para acelerar iteraciones y enriquecer la toma de decisiones.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="haciendo">
-    <div class="section-inner">
-      <div class="section-header">
-        <span class="section-number">02</span>
-        <h2 class="section-title">Qué estoy haciendo</h2>
-      </div>
-      <div class="cards-grid">
-        <article class="project-card">
-          <div class="card-body">
-            <span class="tag tag-dark small">UX RESEARCH · 2025</span>
-            <h3 class="card-title">Rediseño de flujo de onboarding</h3>
-            <p class="card-text">Investigación de usuarios, wireframes y prototipo de alta fidelidad para una app de bienestar. 12 entrevistas, 3 semanas de iteración.</p>
-          </div>
-          <div class="card-footer">FIGMA · MAZE · NOTION</div>
-        </article>
-        <article class="project-card">
-          <div class="card-body">
-            <span class="tag tag-dark small">UX RESEARCH · 2025</span>
-            <h3 class="card-title">Rediseño de flujo de onboarding</h3>
-            <p class="card-text">Investigación de usuarios, wireframes y prototipo de alta fidelidad para una app de bienestar. 12 entrevistas, 3 semanas de iteración.</p>
-          </div>
-          <div class="card-footer">FIGMA · MAZE · NOTION</div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="rincon-craft">
-    <div class="section-inner">
-      <div class="section-header">
-        <span class="section-number">03</span>
-        <h2 class="section-title">Rincón craft</h2>
-      </div>
-      <div class="craft-banner">
-        <span class="craft-icon">✂️</span>
-        <div class="craft-content">
-          <p class="craft-text">Cuando no estoy diseñando pantallas, estoy con las manos en alguna manualidad.</p>
-          <a href="#" class="craft-link">@MILIDESIGN.AR ↗</a>
+      <section class="section" aria-labelledby="closing-title">
+        <div class="container closing" data-reveal>
+          <h2 class="t-display" id="closing-title">¿Charlamos?</h2>
+          <p class="closing__text">Escribime y seguimos la conversación.</p>
+          <a class="btn" href="contacto.html">Contacto</a>
         </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__main">
+        <div class="footer__brand">
+          <p class="footer__brand-name">Mili Design</p>
+          <p class="footer__brand-tagline">UX/UI Design, con un toque de crafting.</p>
+        </div>
+        <ul class="footer__col">
+          <li><a href="index.html#sobre-mi">Sobre mí</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+        </ul>
+        <ul class="footer__col">
+          <li><a class="footer__cta" href="contacto.html">Escribime →</a></li>
+          <li class="footer__handle">@milidesign.ar</li>
+        </ul>
       </div>
-    </div>
-  </section>
-
-</main>
-
-<footer class="footer">
-  <div class="footer-inner">
-    <a href="#" class="footer-logo">mili<span class="dot">.</span>ar</a>
-    <hr class="footer-line">
-    <div class="footer-links">
-      <a href="#" class="tag tag-outline dark">LINKEDIN ↗</a>
-      <a href="#" class="tag tag-outline dark">LINKEDIN ↗</a>
-      <a href="#" class="tag tag-outline dark">LINKEDIN ↗</a>
-    </div>
-    <div class="footer-bottom">
-      <span>MILI.AR · V2 · 2026</span>
-      <span>DISEÑADO POR MILAGROS JUAREZ</span>
-    </div>
-  </div>
-</footer>
-
-<script src="script.js"></script>
-</body>
+      <p class="footer__bottom">© 2026 Mili Design</p>
+    </footer>
+  </body>
 </html>

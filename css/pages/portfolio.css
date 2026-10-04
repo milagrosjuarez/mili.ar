@@ -1,0 +1,15 @@
+/* Portfolio (V1: en construcción) */
+
+.page-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.page-header__eyebrow {
+  line-height: normal;
+}
+
+.section--page {
+  padding-block: var(--space-8);
+}

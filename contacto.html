@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contacto — mili.ar</title>
+    <meta name="description" content="¿Hablamos? Siempre abierta a nuevas conversaciones." />
+    <meta name="theme-color" content="#1c1a12" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=JetBrains+Mono:wght@400&family=Space+Grotesk:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <script>document.documentElement.classList.add("js");</script>
+    <script type="module" src="js/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="nav">
+      <div class="container nav__inner">
+        <a class="nav__logo" href="index.html" aria-label="mili.ar, inicio">mili.ar</a>
+        <nav aria-label="Principal">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="portfolio.html">portfolio</a></li>
+            <!-- V2: <li><a class="nav__link" href="sobre-mi.html">sobre mí</a></li> -->
+            <li><a class="nav__link" href="contacto.html" aria-current="page">contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <div class="container section--page">
+        <section class="contact" aria-labelledby="contact-title">
+          <div class="contact__intro">
+            <h1 class="t-h1" id="contact-title">¿Hablamos? Siempre abierta a nuevas conversaciones</h1>
+            <p>
+              Ya sea para un proyecto de diseño, una colaboración creativa o simplemente para saludar, podés
+              encontrarme en mis redes :)
+            </p>
+          </div>
+          <div class="contact__actions">
+            <!-- TODO: reemplazar los # por las URLs reales -->
+            <a class="btn btn--sm" href="#" target="_blank" rel="noopener noreferrer">Linkedin</a>
+            <a class="btn btn--sm" href="#" target="_blank" rel="noopener noreferrer">Instagram crafty</a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__main">
+        <div class="footer__brand">
+          <p class="footer__brand-name">Mili Design</p>
+          <p class="footer__brand-tagline">UX/UI Design, con un toque de crafting.</p>
+        </div>
+        <ul class="footer__col">
+          <li><a href="index.html#sobre-mi">Sobre mí</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+        </ul>
+        <ul class="footer__col">
+          <li><a class="footer__cta" href="contacto.html">Escribime →</a></li>
+          <li class="footer__handle">@milidesign.ar</li>
+        </ul>
+      </div>
+      <p class="footer__bottom">© 2026 Mili Design</p>
+    </footer>
+  </body>
+</html>

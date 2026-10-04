@@ -26,23 +26,24 @@ git config --global user.name "Milagros Juarez"
 git config --global user.email "milagroseloisajuarez@gmail.com"
 ```
 
-### 0.3 Crear el repositorio en GitHub
-1. En github.com → **New repository**.
-2. Nombre: `miliclaude` (o el que quieras). **No** marques "Add README" ni `.gitignore` (ya los tenés).
-3. Copiá la URL que te muestra (algo como `https://github.com/TU-USUARIO/miliclaude.git`).
+### 0.3 El repositorio ya existe
+Es `https://github.com/milagrosjuarez/mili.ar`. Ramas:
+- `v0` → la web anterior, congelada solo para documentar (no se toca más).
+- `v1` → esta versión (Home, Portfolio en construcción, Contacto).
+- `main` → hoy sigue siendo la v0 y es lo que Vercel publica en producción.
 
-### 0.4 Subir el proyecto por primera vez
+Cuando la V1 esté lista para salir, se hace un Pull Request `v1` → `main` (ver Parte 1, paso 6).
+
+### 0.4 Subir la V1 por primera vez
+La primera vez GitHub pide iniciar sesión. Abrí la terminal de VS Code (*Terminal → New Terminal*) y corré:
+
 ```bash
-git add .
-git commit -m "Primera versión: Home, Portfolio y Contacto"
-git remote add origin https://github.com/TU-USUARIO/miliclaude.git
-git push -u origin main
+git push -u origin v0 v1
 ```
-La primera vez GitHub te pide iniciar sesión (usá el navegador cuando lo ofrezca).
+Si te pide usuario y contraseña: GitHub ya no acepta la contraseña de la cuenta, hace falta un **token**. Lo más fácil es instalar **GitHub Desktop** o la extensión **GitHub Pull Requests** de VS Code, iniciar sesión una vez con el navegador, y repetir el comando.
 
-### 0.5 Conectar con Vercel
-Vercel → tu proyecto → *Settings → Git* → conectá el repo `miliclaude` y dejá **Production Branch = `main`**.
-(Si ya tenías un repo para tu web actual, podés usar ese en vez de crear uno nuevo: avisame y lo migramos.)
+### 0.5 Vercel
+Vercel → tu proyecto → *Settings → Git*: dejá **Production Branch = `main`**. Cada rama que subas (por ejemplo `v1`) genera su propio link de preview, sin tocar la web publicada.
 
 ---
 

@@ -196,9 +196,24 @@
   97%, 100% { transform: scale(1) rotate(-4deg); opacity: 0; }
 }
 
+/* Cada card espera a entrar en pantalla para arrancar (js/components/wip.js) */
+.js .wip-card:not(.is-running) *,
+.js .wip-card:not(.is-running) *::after {
+  animation-play-state: paused;
+}
+
 @media (max-width: 900px) {
   .wip__grid {
     grid-template-columns: 1fr;
+  }
+
+  /* una columna: se ve una card por vez, así que sin escalonado y solo 2 */
+  .wip-card {
+    --d: 0s;
+  }
+
+  .wip-card:nth-child(3) {
+    display: none;
   }
 
   .tape {

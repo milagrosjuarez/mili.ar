@@ -159,18 +159,33 @@
   opacity: 1;
 }
 
-@media (max-width: 480px) {
+/* Celular: credencial compacta para que el título del hero asome en la primera pantalla */
+@media (max-width: 700px) {
   .badge {
-    width: min(100%, 22.1875rem);
+    --hang: 76px;
+
+    width: min(100%, 17rem);
   }
 
   .badge__card {
-    padding-inline: 24px;
+    padding: 16px 20px 20px;
+  }
+
+  .badge__inner {
+    gap: 12px;
+  }
+
+  .badge__body {
+    gap: var(--space-2);
   }
 
   .badge__photo {
     width: 100%;
     height: auto;
-    aspect-ratio: 275 / 312;
+    aspect-ratio: 224 / 190;
+  }
+
+  .badge__text {
+    gap: var(--space-1);
   }
 }

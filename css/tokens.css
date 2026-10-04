@@ -65,3 +65,11 @@
     --lh-h1: 2.25rem;
   }
 }
+
+/* Celular: "UX con un toque / de crafting" entra en dos líneas */
+@media (max-width: 480px) {
+  :root {
+    --text-display: 2.4rem;
+    --lh-display: 2.75rem;
+  }
+}

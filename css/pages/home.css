@@ -135,6 +135,16 @@
   }
 }
 
+@media (max-width: 700px) {
+  .hero {
+    --hero-pad: var(--space-4);
+  }
+
+  .hero__inner {
+    gap: var(--space-3);
+  }
+}
+
 @media (max-width: 800px) {
   .about {
     flex-direction: column;
